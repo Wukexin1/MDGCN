@@ -1,0 +1,149 @@
+{
+  "family": "complete",
+  "run_id": "surface_pointnet_xyz_k15_base_rNA_s24_b32_e250",
+  "selected_epoch": 220,
+  "checkpoint": {
+    "expected_sha256": "5786abff582417bd94df596313c9c734840ec0ffb819e4150da24c79656326a4",
+    "status": "matched",
+    "deserialized": true,
+    "actual_sha256": "5786abff582417bd94df596313c9c734840ec0ffb819e4150da24c79656326a4"
+  },
+  "input_checks": {
+    "ok": true,
+    "dataset": "surface",
+    "split_counts": {
+      "test": 40
+    },
+    "checks": [
+      {
+        "file": "code/complete/assembled_models.py",
+        "expected_sha256": "1db9a69645513bd7b2053c19ebb1592fcc9525d5ff89fa2585aca8696125c947",
+        "actual_sha256": "1db9a69645513bd7b2053c19ebb1592fcc9525d5ff89fa2585aca8696125c947",
+        "status": "matched"
+      },
+      {
+        "file": "code/complete/data_io.py",
+        "expected_sha256": "9c149a4f73d09b03f7e69874940597f4ba0009813a97fefd8a2b0495414fcaf5",
+        "actual_sha256": "9c149a4f73d09b03f7e69874940597f4ba0009813a97fefd8a2b0495414fcaf5",
+        "status": "matched"
+      },
+      {
+        "file": "code/complete/models.py",
+        "expected_sha256": "b7e607c09ffe09fdd186a758cb5a67bd6db54c91c0cb982957b30e75f924c8ae",
+        "actual_sha256": "b7e607c09ffe09fdd186a758cb5a67bd6db54c91c0cb982957b30e75f924c8ae",
+        "status": "matched"
+      },
+      {
+        "file": "code/complete/train.py",
+        "expected_sha256": "7be947b072e7613b5af1430cb4ec9ab915768f04a0dba628127c311d5715134b",
+        "actual_sha256": "7be947b072e7613b5af1430cb4ec9ab915768f04a0dba628127c311d5715134b",
+        "status": "matched"
+      },
+      {
+        "file": "code/complete/common.py",
+        "expected_sha256": "fce8bf47f0125ecdda9b736521eddf0b220ea8daea979210195c8dbf14e92255",
+        "actual_sha256": "fce8bf47f0125ecdda9b736521eddf0b220ea8daea979210195c8dbf14e92255",
+        "status": "matched"
+      },
+      {
+        "file": "code/complete/data/surface/manifest.json",
+        "status": "matched",
+        "historical_sha256": "8c349b389ab15c7f9c40052187295f75afcdaef85db99f682c28258254630a08",
+        "actual_sha256": "8c349b389ab15c7f9c40052187295f75afcdaef85db99f682c28258254630a08",
+        "accepted_path_sanitization": false
+      },
+      {
+        "file": "code/complete/data/surface/inputs.npz",
+        "expected_sha256": "7d3d27739030ca7394a66c23628727f46f3547a0ffd1d6589e64670611f82a0e",
+        "actual_sha256": "7d3d27739030ca7394a66c23628727f46f3547a0ffd1d6589e64670611f82a0e",
+        "status": "matched"
+      }
+    ],
+    "issues": []
+  },
+  "training_executed": false,
+  "evaluation_function": "frozen train.evaluate",
+  "batch_size": 32,
+  "threads": 4,
+  "environment": {
+    "python": "3.9.13",
+    "numpy": "1.26.4",
+    "torch": "2.6.0",
+    "cuda_runtime": null,
+    "device": "cpu",
+    "gpu": null
+  },
+  "historical_torch": "2.4.1",
+  "metrics": {
+    "test": {
+      "n": 40,
+      "oa": 0.7,
+      "ba": 0.6833333333333333,
+      "macro_f1": 0.6666666666666667,
+      "class_recall": [
+        0.5,
+        0.3333333333333333,
+        1.0,
+        0.9
+      ],
+      "class_precision": [
+        1.0,
+        0.75,
+        0.7333333333333333,
+        0.5625
+      ],
+      "class_f1": [
+        0.6666666666666666,
+        0.46153846153846156,
+        0.8461538461538461,
+        0.6923076923076923
+      ],
+      "confusion_matrix": [
+        [
+          5,
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2,
+          4
+        ],
+        [
+          0,
+          0,
+          11,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          9
+        ]
+      ],
+      "class_support": [
+        10,
+        9,
+        11,
+        10
+      ],
+      "cross_entropy": 0.846646535396576
+    }
+  },
+  "comparison_with_retained_predictions": {
+    "test": {
+      "same_sample_ids": true,
+      "truth_mismatches": 0,
+      "prediction_mismatches": 0,
+      "maximum_probability_absolute_difference": 1.430511474609375e-06,
+      "same_probability_dimensions": true
+    }
+  },
+  "seconds": {
+    "test": 4.935847375
+  },
+  "completed": true
+}

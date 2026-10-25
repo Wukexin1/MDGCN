@@ -1,0 +1,150 @@
+Saved-model evaluation
+======================
+
+Purpose
+-------
+tools/evaluate_saved.py loads an existing validation-selected checkpoint and
+evaluates it with the exact evaluation function from the frozen experiment
+source. It does not train, select epochs, change the recorded batch size, or
+overwrite retained predictions. The checkpoint must match the SHA256 stored in
+the corresponding historical result. Missing or mismatched weights stop the
+command before a model is constructed; there is no random-weight fallback.
+
+The three experiment families retain their separate protocols:
+  complete    code/complete/train.py; validation OA, then lower cross entropy
+  uniform     code/uniform/train.py; validation OA, then lower cross entropy
+  components  code/components/train_revised.py; validation BA, then lower cross entropy
+
+The recorded feature variant, class order, sample order, split, candidate mask,
+normalization, neighborhood size and evaluation batch size are reused. Data
+augmentation is disabled by the frozen evaluation functions. Test data is not
+used to select a checkpoint. Changing --device only changes the inference
+device; the resulting environment and differences from retained predictions
+are reported explicitly.
+
+Requirements
+------------
+--list-runs and --check-inputs require Python 3.8+ and the standard library only.
+Inference also requires NumPy and PyTorch. The historical recorded environment
+uses Python 3.8.20 and PyTorch 2.4.1 with CUDA 11.8. Use the collected environment
+record when preparing the final environment specification. Selected checkpoints
+are read using torch.load(..., map_location='cpu', weights_only=True); unsafe
+pickle fallback is not enabled.
+
+Run these commands from the release directory.
+
+1. List exact run IDs
+--------------------
+python tools/evaluate_saved.py --list-runs
+python tools/evaluate_saved.py --list-runs --family uniform
+
+The list contains 471 audited runs: 363 complete, 36 uniform and 72 components.
+Copy a run ID without the leading family/ part into --run-id.
+
+2. Check files without loading a checkpoint
+------------------------------------------
+python tools/evaluate_saved.py --family complete \
+  --run-id surface_dgcnn_norm_k15_base_rNA_s2026_b32_e250 \
+  --check-inputs
+
+This checks frozen source hashes, dataset identity, class order, split counts,
+and input file hashes. A missing selected.pt is reported as "missing" with
+"ready_for_inference": false. Exit code 0 in this mode means that input checks
+passed and any provided checkpoint did not mismatch; it does not mean inference
+ran. Missing geodesic arrays or hash mismatches return exit code 2.
+
+The controlled and component manifests have path-only sanitization recorded in
+staging_manifest.json. The command accepts only the exact old-to-new manifest
+hash mapping in that inventory. Numeric input files still require their audited
+hashes. A modified manifest is not accepted merely because its sample count is
+unchanged.
+
+3. Add recovered selected checkpoints
+------------------------------------
+Extract MDGCN_checkpoints_001.zip through MDGCN_checkpoints_004.zip into the
+repository root. Each is an independent ZIP; do not join the files byte by byte.
+The expected layout is:
+
+recovered_checkpoints/
+  complete/runs/RUN_ID/selected.pt
+  uniform/runs/RUN_ID/selected.pt
+  components/runs/RUN_ID/selected.pt
+
+Then check one recovered checkpoint:
+
+python tools/evaluate_saved.py --family uniform \
+  --run-id surface_soft_norm_k15_uniform_rNA_s24_b32_e250 \
+  --weights-root recovered_checkpoints --check-inputs
+
+Alternatively supply --checkpoint /path/to/exact/selected.pt. Do not provide
+both --checkpoint and --weights-root. The command checks the file against the
+historical result, not against a newly calculated or manually supplied hash.
+
+4. Run inference
+----------------
+python tools/evaluate_saved.py --family uniform \
+  --run-id surface_soft_norm_k15_uniform_rNA_s24_b32_e250 \
+  --weights-root recovered_checkpoints --device cuda --split all \
+  --output inference_outputs/uniform_soft_s24
+
+Default --split is test. Use --split all to evaluate train, val and test in the
+historical order. Use a new output directory for every invocation. If weights
+are available only for a different run, select that exact audited run ID; do not
+rename the checkpoint or substitute it for this example.
+
+By default inputs are read from code/FAMILY/data/. If they are stored elsewhere,
+use --data-root /path/to/data_parent. This directory must contain the dataset
+subfolders surface, real and/or controlled for complete/uniform; components
+uses original_synthetic_v1, original_industrial_v1 or controlled_v1, selected
+automatically by the historical manifest hash. Keep the recorded files intact.
+
+The geodesic variants additionally need their exact cached geo/*.npy arrays in
+the matching surface/ or real/ folder. --check-inputs names missing files. The
+archived geodesic cache is a separate large data asset; it is not rebuilt by
+this inference command.
+
+Outputs
+-------
+evaluation_report.json records:
+  - checkpoint SHA256 and selected epoch;
+  - file verification, batch size and environment;
+  - OA, BA, macro F1, confusion matrices and cross entropy;
+  - time for each split, including dataset loading and evaluation;
+  - sample-ID/truth/prediction comparison and maximum probability difference
+    against retained predictions.
+
+Each requested split also gets a fresh *_predictions.json. A completed run is
+not automatically asserted to be numerically identical to the historical GPU
+run. Inspect the comparison fields, especially when the device or numerical
+library versions differ. Saved historical results are preserved for comparison.
+
+Verification status
+-------------------
+The command's inventory and hash-validation paths are checked locally. Small,
+isolated, explicitly untrained fixtures test loading and frozen evaluation for
+all three families, as well as missing/mismatched weights and output protection.
+Fixture weights are not included in this release and are not paper results.
+The local fixture environment used CPU PyTorch 2.2.2; it does not establish
+historical CUDA numerical agreement. In an all-split check of the local package,
+411 runs had all input files available. The remaining 60 required only the
+separate geodesic cache; no other input or source-hash differences were found.
+
+The four release archives contain all 471 selected checkpoints: 363 complete,
+36 uniform and 72 components. Every checkpoint passed an independent local
+SHA256 check against its historical run record, with no duplicate or extra
+checkpoints.
+
+Four historical models were evaluated on their complete test splits on the
+local CPU: complete/surface PointNet, uniform/surface hard, uniform/real soft
+(all at batch size 32), and components/real soft with add fusion at batch size 25.
+All use coordinate inputs, seed 24 and their recorded evaluation settings. Their
+176 predicted categories match the retained predictions. The largest absolute
+probability difference is 0.002731614. These checks used Python 3.9.13,
+NumPy 1.26.4 and PyTorch 2.6.0; training used CUDA and PyTorch 2.4.1.
+Full reports and per-run times are in verification/inference_summary.json
+and verification/inference_checks/. The other 467 models have passed
+file-identity checks but have not been rerun in this local validation.
+Current coverage and evaluation status are recorded in docs/RELEASE_STATUS.txt.
+
+analysis/reproduce_statistics.py recalculates saved predictions; use this
+evaluation command to obtain new model predictions.

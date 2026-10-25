@@ -1,0 +1,293 @@
+{
+  "scope": "Four selected historical checkpoints evaluated on their complete test splits; not all 471 models evaluated.",
+  "training_executed": false,
+  "runs": [
+    {
+      "family": "complete",
+      "run_id": "surface_pointnet_xyz_k15_base_rNA_s24_b32_e250",
+      "split": "test",
+      "n": 40,
+      "completed": true,
+      "metrics": {
+        "n": 40,
+        "oa": 0.7,
+        "ba": 0.6833333333333333,
+        "macro_f1": 0.6666666666666667,
+        "class_recall": [
+          0.5,
+          0.3333333333333333,
+          1.0,
+          0.9
+        ],
+        "class_precision": [
+          1.0,
+          0.75,
+          0.7333333333333333,
+          0.5625
+        ],
+        "class_f1": [
+          0.6666666666666666,
+          0.46153846153846156,
+          0.8461538461538461,
+          0.6923076923076923
+        ],
+        "confusion_matrix": [
+          [
+            5,
+            1,
+            1,
+            3
+          ],
+          [
+            0,
+            3,
+            2,
+            4
+          ],
+          [
+            0,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            9
+          ]
+        ],
+        "class_support": [
+          10,
+          9,
+          11,
+          10
+        ],
+        "cross_entropy": 0.846646535396576
+      },
+      "comparison": {
+        "same_sample_ids": true,
+        "truth_mismatches": 0,
+        "prediction_mismatches": 0,
+        "maximum_probability_absolute_difference": 1.430511474609375e-06,
+        "same_probability_dimensions": true
+      },
+      "seconds_including_data_load": 4.935847375,
+      "environment": {
+        "python": "3.9.13",
+        "numpy": "1.26.4",
+        "torch": "2.6.0",
+        "cuda_runtime": null,
+        "device": "cpu",
+        "gpu": null
+      },
+      "checkpoint_sha256": "5786abff582417bd94df596313c9c734840ec0ffb819e4150da24c79656326a4"
+    },
+    {
+      "family": "uniform",
+      "run_id": "real_soft_xyz_k15_uniform_rNA_s24_b32_e250",
+      "split": "test",
+      "n": 48,
+      "completed": true,
+      "metrics": {
+        "n": 48,
+        "oa": 0.9166666666666666,
+        "ba": 0.9163398692810457,
+        "macro_f1": 0.9173160173160174,
+        "class_recall": [
+          0.8666666666666667,
+          1.0,
+          0.8823529411764706
+        ],
+        "class_precision": [
+          1.0,
+          0.8421052631578947,
+          0.9375
+        ],
+        "class_f1": [
+          0.9285714285714286,
+          0.9142857142857143,
+          0.9090909090909091
+        ],
+        "confusion_matrix": [
+          [
+            13,
+            1,
+            1
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            2,
+            15
+          ]
+        ],
+        "class_support": [
+          15,
+          16,
+          17
+        ],
+        "cross_entropy": 0.2748393913110097
+      },
+      "comparison": {
+        "same_sample_ids": true,
+        "truth_mismatches": 0,
+        "prediction_mismatches": 0,
+        "maximum_probability_absolute_difference": 0.0027316140476614237,
+        "same_probability_dimensions": true
+      },
+      "seconds_including_data_load": 86.44713741599999,
+      "environment": {
+        "python": "3.9.13",
+        "numpy": "1.26.4",
+        "torch": "2.6.0",
+        "cuda_runtime": null,
+        "device": "cpu",
+        "gpu": null
+      },
+      "checkpoint_sha256": "ad26f43d22da51f6244a815c7af685882f66732bcdd2cfaa176deca97c55b0ec"
+    },
+    {
+      "family": "uniform",
+      "run_id": "surface_hard_xyz_k15_uniform_rNA_s24_b32_e250",
+      "split": "test",
+      "n": 40,
+      "completed": true,
+      "metrics": {
+        "n": 40,
+        "oa": 0.8,
+        "ba": 0.7833333333333332,
+        "macro_f1": 0.7738095238095238,
+        "class_recall": [
+          1.0,
+          0.3333333333333333,
+          1.0,
+          0.8
+        ],
+        "class_precision": [
+          1.0,
+          0.6,
+          1.0,
+          0.5714285714285714
+        ],
+        "class_f1": [
+          1.0,
+          0.42857142857142855,
+          1.0,
+          0.6666666666666666
+        ],
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            8
+          ]
+        ],
+        "class_support": [
+          10,
+          9,
+          11,
+          10
+        ],
+        "cross_entropy": 0.6228089332580566
+      },
+      "comparison": {
+        "same_sample_ids": true,
+        "truth_mismatches": 0,
+        "prediction_mismatches": 0,
+        "maximum_probability_absolute_difference": 9.527802467346191e-05,
+        "same_probability_dimensions": true
+      },
+      "seconds_including_data_load": 62.458491875,
+      "environment": {
+        "python": "3.9.13",
+        "numpy": "1.26.4",
+        "torch": "2.6.0",
+        "cuda_runtime": null,
+        "device": "cpu",
+        "gpu": null
+      },
+      "checkpoint_sha256": "79f50f48eb1ed667f9b5c5fc964bffb9b527d72d5b8263ed3420b4bc0858da29"
+    },
+    {
+      "family": "components",
+      "run_id": "original_industrial_v1_original_soft_add_s24_e250_b25_fe686f9d",
+      "split": "test",
+      "n": 48,
+      "completed": true,
+      "metrics": {
+        "n": 48,
+        "oa": 0.9375,
+        "ba": 0.9333333333333332,
+        "macro_f1": 0.9343434343434343,
+        "confusion_matrix": [
+          [
+            12,
+            1,
+            2
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            17
+          ]
+        ],
+        "class_support": [
+          15,
+          16,
+          17
+        ],
+        "cross_entropy": 0.2934228976567586
+      },
+      "comparison": {
+        "same_sample_ids": true,
+        "truth_mismatches": 0,
+        "prediction_mismatches": 0,
+        "maximum_probability_absolute_difference": 0.002150118350982666,
+        "same_probability_dimensions": true
+      },
+      "seconds_including_data_load": 82.61058591599999,
+      "environment": {
+        "python": "3.9.13",
+        "numpy": "1.26.4",
+        "torch": "2.6.0",
+        "cuda_runtime": null,
+        "device": "cpu",
+        "gpu": null
+      },
+      "checkpoint_sha256": "40004a38de620b96811dc85eecd37af58ffff86ca7b4cee18d3e41b78d86a1f4"
+    }
+  ],
+  "total_test_prediction_rows": 176,
+  "total_label_mismatches": 0,
+  "probabilities_bitwise_identical": false,
+  "current_local_cpu_not_historical_cuda": true
+}

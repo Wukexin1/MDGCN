@@ -1,0 +1,5 @@
+# Direct dependencies for frozen-input training and checkpoint evaluation.
+# Python 3.8.20. Install the CUDA 11.8 build of torch first; see docs/ENVIRONMENT.md.
+# Versions are supported by retained logs and the 25 October 2026 server snapshot.
+torch==2.4.1
+numpy==1.24.3

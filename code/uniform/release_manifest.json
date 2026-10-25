@@ -1,0 +1,104 @@
+{
+  "name": "IISE_uniform_preprocess_public_candidate",
+  "date": "2026-10-23",
+  "parent_release_sha256": "3c1a7971bbc2a23716ad121fac4a0038af626c9c636ade07ad4ae5c74d569e9c",
+  "inventory_note": "Local candidate inventory excluding the original private-purpose README. Training and preprocessing Python files are byte-identical to the frozen run version.",
+  "files": {
+    "assembled_models.py": {
+      "sha256": "1db9a69645513bd7b2053c19ebb1592fcc9525d5ff89fa2585aca8696125c947",
+      "bytes": 101502
+    },
+    "assembly_manifest.json": {
+      "sha256": "083bbf28be58e8f4f0f1644d31b2102836419f81c055c66fd5ad5f32e8ae5af1",
+      "bytes": 9908
+    },
+    "baseline_reference.json": {
+      "sha256": "923d5d30357e5ad04d3dfb0ef8e2d9d1b1a6f184cbc976485bc99d45ecbc1f1d",
+      "bytes": 124779
+    },
+    "common.py": {
+      "sha256": "fce8bf47f0125ecdda9b736521eddf0b220ea8daea979210195c8dbf14e92255",
+      "bytes": 783
+    },
+    "data/real/inputs.npz": {
+      "sha256": "b773a953097bc00269d52244f7d0fca85d81513f394fa206c84d743e731caa7c",
+      "bytes": 5550157
+    },
+    "data/real/manifest.json": {
+      "sha256": "ba36d618c69f87f99050e5ce03a5b6e490acbf8b9ffe449a58c9a3d9d4e0dad7",
+      "bytes": 65433
+    },
+    "data/real/mask_diagnostics.json": {
+      "sha256": "0e74bdd6dee8808464a040830f114e10ca05a74ed16d69c52cf6531ac1363794",
+      "bytes": 4283
+    },
+    "data/surface/inputs.npz": {
+      "sha256": "42d30d64f8408440471d4bdb77eca704ca746d8bb40e6566b0d6db3cfb24d6c8",
+      "bytes": 11500167
+    },
+    "data/surface/manifest.json": {
+      "sha256": "b8b33268fe5f4ab44bae01dfaeb6dfe3b08905aed05309fc960aa9bc2acd72e2",
+      "bytes": 107706
+    },
+    "data/surface/mask_diagnostics.json": {
+      "sha256": "6e1f327248a453afea1c0bb004b6ae20a21c86464a045fe68b14760a86c342d9",
+      "bytes": 5685
+    },
+    "data_io.py": {
+      "sha256": "9c149a4f73d09b03f7e69874940597f4ba0009813a97fefd8a2b0495414fcaf5",
+      "bytes": 3065
+    },
+    "experiment_plan.json": {
+      "sha256": "97e90463124e22e4c918ba86de07b68278a2d9ca9c66eb4f1446f47b75e64761",
+      "bytes": 16358
+    },
+    "fixed_splits/real.json": {
+      "sha256": "18172948955662efd2c0e7279f138cb981f6a17aa37ad0dcdedc7da957d9c7d2",
+      "bytes": 3817
+    },
+    "fixed_splits/surface.json": {
+      "sha256": "129382adaa8d22da491ce21c6cc4800d610e6ec22212c07f4819afa5c1af00af",
+      "bytes": 6362
+    },
+    "models.py": {
+      "sha256": "b7e607c09ffe09fdd186a758cb5a67bd6db54c91c0cb982957b30e75f924c8ae",
+      "bytes": 2234
+    },
+    "plan.py": {
+      "sha256": "78233ee371e4c458f01a4cb5bae40356da6dbb7c741d7852a018e71ff3ed5255",
+      "bytes": 1659
+    },
+    "protocol.json": {
+      "sha256": "dd0115dd3c51d012b77252908bee74d15f7fdb9cdd104d904db62b0fa1b857cc",
+      "bytes": 1822
+    },
+    "run_uniform.py": {
+      "sha256": "52069dca3702877f533b278f9d93dd727f6b3c646cd19e1745339c1b0687a567",
+      "bytes": 12578
+    },
+    "smoke.py": {
+      "sha256": "4685e7237c308a104ec489141d40fb18eb248f789660590b64be70722dab19d0",
+      "bytes": 3032
+    },
+    "start_background.py": {
+      "sha256": "5a26746db91cb3610d0f76c6e8c3c94bf68dd375ccf3b874c768b0fb1af4d79b",
+      "bytes": 985
+    },
+    "status.py": {
+      "sha256": "16e66004dbdbad9c991e065a5f4b771b36f98446c46bb3ab17d7db0b93fcbfc5",
+      "bytes": 1670
+    },
+    "test_uniform.py": {
+      "sha256": "742adfe68294c9a0301c4de97dd56a06a4609eb4e4270c0a986106704eb3ebdf",
+      "bytes": 8085
+    },
+    "train.py": {
+      "sha256": "7be947b072e7613b5af1430cb4ec9ab915768f04a0dba628127c311d5715134b",
+      "bytes": 10968
+    },
+    "uniform_preprocess.py": {
+      "sha256": "617058cda931c2e5d667ec5014e2ec720de40ae56e53d0a187b6b1d386b11bbe",
+      "bytes": 9799
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "snapshot_times_utc": [
+    "2026-10-25T02:56:41.863617+00:00",
+    "2026-10-25T03:01:21.451073+00:00"
+  ],
+  "identical_except_collection_time": true,
+  "published_fields": [
+    "collected_utc",
+    "python",
+    "python_implementation",
+    "os",
+    "kernel_release",
+    "architecture",
+    "packages",
+    "note",
+    "linux_distribution",
+    "hardware",
+    "torch",
+    "nvidia_smi"
+  ],
+  "privacy_scope": "Software versions and hardware specifications only; no account names, hostnames, local paths, credentials or environment-variable values.",
+  "historical_kernel_release": "5.15.0-187-generic",
+  "current_kernel_release": "5.15.0-198-generic"
+}

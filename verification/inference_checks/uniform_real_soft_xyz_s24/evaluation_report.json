@@ -1,0 +1,136 @@
+{
+  "family": "uniform",
+  "run_id": "real_soft_xyz_k15_uniform_rNA_s24_b32_e250",
+  "selected_epoch": 26,
+  "checkpoint": {
+    "expected_sha256": "ad26f43d22da51f6244a815c7af685882f66732bcdd2cfaa176deca97c55b0ec",
+    "status": "matched",
+    "deserialized": true,
+    "actual_sha256": "ad26f43d22da51f6244a815c7af685882f66732bcdd2cfaa176deca97c55b0ec"
+  },
+  "input_checks": {
+    "ok": true,
+    "dataset": "real",
+    "split_counts": {
+      "test": 48
+    },
+    "checks": [
+      {
+        "file": "code/uniform/assembled_models.py",
+        "expected_sha256": "1db9a69645513bd7b2053c19ebb1592fcc9525d5ff89fa2585aca8696125c947",
+        "actual_sha256": "1db9a69645513bd7b2053c19ebb1592fcc9525d5ff89fa2585aca8696125c947",
+        "status": "matched"
+      },
+      {
+        "file": "code/uniform/data_io.py",
+        "expected_sha256": "9c149a4f73d09b03f7e69874940597f4ba0009813a97fefd8a2b0495414fcaf5",
+        "actual_sha256": "9c149a4f73d09b03f7e69874940597f4ba0009813a97fefd8a2b0495414fcaf5",
+        "status": "matched"
+      },
+      {
+        "file": "code/uniform/models.py",
+        "expected_sha256": "b7e607c09ffe09fdd186a758cb5a67bd6db54c91c0cb982957b30e75f924c8ae",
+        "actual_sha256": "b7e607c09ffe09fdd186a758cb5a67bd6db54c91c0cb982957b30e75f924c8ae",
+        "status": "matched"
+      },
+      {
+        "file": "code/uniform/train.py",
+        "expected_sha256": "7be947b072e7613b5af1430cb4ec9ab915768f04a0dba628127c311d5715134b",
+        "actual_sha256": "7be947b072e7613b5af1430cb4ec9ab915768f04a0dba628127c311d5715134b",
+        "status": "matched"
+      },
+      {
+        "file": "code/uniform/common.py",
+        "expected_sha256": "fce8bf47f0125ecdda9b736521eddf0b220ea8daea979210195c8dbf14e92255",
+        "actual_sha256": "fce8bf47f0125ecdda9b736521eddf0b220ea8daea979210195c8dbf14e92255",
+        "status": "matched"
+      },
+      {
+        "file": "code/uniform/data/real/manifest.json",
+        "status": "matched",
+        "historical_sha256": "ba36d618c69f87f99050e5ce03a5b6e490acbf8b9ffe449a58c9a3d9d4e0dad7",
+        "actual_sha256": "ba36d618c69f87f99050e5ce03a5b6e490acbf8b9ffe449a58c9a3d9d4e0dad7",
+        "accepted_path_sanitization": false
+      },
+      {
+        "file": "code/uniform/data/real/inputs.npz",
+        "expected_sha256": "b773a953097bc00269d52244f7d0fca85d81513f394fa206c84d743e731caa7c",
+        "actual_sha256": "b773a953097bc00269d52244f7d0fca85d81513f394fa206c84d743e731caa7c",
+        "status": "matched"
+      }
+    ],
+    "issues": []
+  },
+  "training_executed": false,
+  "evaluation_function": "frozen train.evaluate",
+  "batch_size": 32,
+  "threads": 4,
+  "environment": {
+    "python": "3.9.13",
+    "numpy": "1.26.4",
+    "torch": "2.6.0",
+    "cuda_runtime": null,
+    "device": "cpu",
+    "gpu": null
+  },
+  "historical_torch": "2.4.1",
+  "metrics": {
+    "test": {
+      "n": 48,
+      "oa": 0.9166666666666666,
+      "ba": 0.9163398692810457,
+      "macro_f1": 0.9173160173160174,
+      "class_recall": [
+        0.8666666666666667,
+        1.0,
+        0.8823529411764706
+      ],
+      "class_precision": [
+        1.0,
+        0.8421052631578947,
+        0.9375
+      ],
+      "class_f1": [
+        0.9285714285714286,
+        0.9142857142857143,
+        0.9090909090909091
+      ],
+      "confusion_matrix": [
+        [
+          13,
+          1,
+          1
+        ],
+        [
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          2,
+          15
+        ]
+      ],
+      "class_support": [
+        15,
+        16,
+        17
+      ],
+      "cross_entropy": 0.2748393913110097
+    }
+  },
+  "comparison_with_retained_predictions": {
+    "test": {
+      "same_sample_ids": true,
+      "truth_mismatches": 0,
+      "prediction_mismatches": 0,
+      "maximum_probability_absolute_difference": 0.0027316140476614237,
+      "same_probability_dimensions": true
+    }
+  },
+  "seconds": {
+    "test": 86.44713741599999
+  },
+  "completed": true
+}

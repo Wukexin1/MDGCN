@@ -1,0 +1,59 @@
+REPRODUCING THE DATA-BASED FIGURES
+
+Requirements
+Python 3.8 or later, NumPy and Matplotlib. The script uses a noninteractive
+backend and does not require a GPU, checkpoint, network connection or TeX.
+The local verification used Python 3.9, NumPy 1.26.4 and Matplotlib 3.8.2.
+Font rendering can vary slightly with the Matplotlib version and platform.
+
+From the repository root, run:
+
+    python tools/plot_figures.py --output generated/figures
+
+This creates PDF and 600 dpi PNG versions of Figures 4 and 6, plus JSON files
+recording their inputs, run membership, recomputed statistics and checksums.
+To generate only one figure, add --figure 4 or --figure 6. A different output
+directory can be supplied. All data paths are relative to the repository root;
+the script can also be run from another working directory with --root PATH.
+
+Figure 4: synthetic surface examples
+The input is code/uniform/data/surface/inputs.npz and its adjacent manifest.json.
+The four examples and their order are fixed to the accepted manuscript:
+
+    Raised: raised/raised1.txt    (row 150)
+    Dent:   dent/dent1.txt        (row 50)
+    Crack:  crack/crack1.txt      (row 0)
+    Normal: normal/normal10.txt   (row 101)
+
+Each example contains 2000 points and belongs to the training split. Orange
+points indicate the supplied mask_uniform candidates; gray points indicate
+the complement. These masks are preprocessing outputs, not pointwise manual
+annotations. The input file SHA-256 is checked before plotting. The script
+also checks the sample IDs and candidate counts (412, 193, 578, 113).
+The original panel order, camera, colours, point sizes, axis labels and layout
+are retained. Point layers are rendered at 600 dpi in the PDF, with vector
+text and axes. The higher raster resolution does not change the sample data.
+
+Figure 6: controlled fraction of defect points
+The input is the 45 complete-protocol result folders under
+retained_results/complete_return/results. The script uses the fixed run
+membership in analysis/expected_display_values.json and verifies each run
+with analysis/reproduce_statistics.py. It recalculates metrics from saved
+predictions, checks the saved metrics and validation selection, then computes
+mean test overall accuracy and sample standard deviation across seeds 24,
+42 and 2026 for each model and fraction. Standard deviation uses ddof=1.
+
+The plotted models are DSRF-only, MDGCN1 (hard), and MDGCN2 (soft). Fractions
+are 0.5%, 1%, 2%, 5%, and 10%. All groups use the controlled dataset, xyz
+features, k=15, tau=base, batch size 32 and 250 epochs. The script requires
+all 15 recomputed mean/standard-deviation pairs to match the manuscript's
+full-precision values before saving the figure. The PDF is vector graphics.
+Text is black; the original gray, green and blue model curves are retained.
+
+Scope
+This entry point redraws Figures 4 and 6 from frozen arrays and saved
+predictions. It does not train models or rerun checkpoint inference.
+Figures 1-3 are authored method diagrams. Figure 5 consists of previously
+provided scan views. The complete Front_fusion_30.ply scan is not needed
+for this script or the reported classification experiments.
+The script never edits the manuscript or replaces its existing figures.

@@ -1,0 +1,26 @@
+{
+  "operation": "Full saved-result statistics verification; input checks and writes included",
+  "seconds": 2.621015291,
+  "returncode": 0,
+  "python": "3.9.13",
+  "numpy": "1.26.4",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "summary": {
+    "status": "passed",
+    "counts": {
+      "expected_runs": 471,
+      "verified_runs": 471,
+      "expected_groups": 157,
+      "verified_groups": 157,
+      "expected_prediction_rows": 75630,
+      "verified_prediction_rows": 75630,
+      "performance_display_checks": 630,
+      "performance_display_matches": 630,
+      "candidate_display_checks": 30,
+      "candidate_display_matches": 30,
+      "runs_with_checkpoint": 0,
+      "issues": 0
+    }
+  }
+}

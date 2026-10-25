@@ -1,0 +1,352 @@
+{
+  "source_sha256": {
+    "model1.py": "619d18e6bc57b60f991d5f6cc5c6c9d461cc1f6fcc25f9d5500dfb21a687f121",
+    "model.py": "9840aa8926c4377e5fd0434ca582bbe3abf803ea79940c63d94522805f2c7378",
+    "main1.py": "03ce3ddd50a1e15daa646b1dbee78b63f449e650bcb4c7f72a05caab7dd3b6af",
+    "main.py": "f84fd995069af012f34c6b98da494afe33a29b0d1d942923235cfbaa256ea3a6",
+    "defect_data.py": "2a9710b3686fdbc1560fb4d62f3003f9dd220749add5ecee2025f2f3e230f2d5",
+    "util.py": "f90b1cff838c8d48d55043896bff4b7aff08128b27b85f1b4e3a39732d927449",
+    "tools.py": "4f50f34ab434f495b591bcc025bc61db0ddcd7fd420158838d252aa6aa01f773",
+    "generate_tau_data.py": "e9a9507a6bab4c0fe66cc60273af91f9afaa5a6bd29ab4287b72094674c38647"
+  },
+  "edits": [
+    {
+      "line": 23,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 57,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 130,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 257,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 306,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 374,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 442,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 510,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 560,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 622,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 684,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 746,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 799,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 827,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 880,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 929,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 978,
+      "change": "place indices on x.device"
+    },
+    {
+      "line": 1423,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1424,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1425,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1426,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1427,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1429,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1430,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1431,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1432,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1433,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1537,
+      "change": "tensor where for additive DSRF"
+    },
+    {
+      "line": 1580,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1581,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1582,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1583,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1584,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1586,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1587,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1588,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1589,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1590,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 1692,
+      "change": "tensor where for additive DSRF"
+    },
+    {
+      "line": 1823,
+      "change": "tensor where for MVGCN replacement"
+    },
+    {
+      "line": 1956,
+      "change": "tensor where for MVGCN replacement"
+    },
+    {
+      "line": 2088,
+      "change": "tensor where for MVGCN replacement"
+    },
+    {
+      "line": 2221,
+      "change": "tensor where for MVGCN replacement"
+    },
+    {
+      "line": 2356,
+      "change": "tensor where for MVGCN replacement"
+    },
+    {
+      "line": 2399,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2400,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2401,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2402,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2403,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2405,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2406,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2407,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2408,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2409,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2513,
+      "change": "tensor where for additive DSRF"
+    },
+    {
+      "line": 2556,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2557,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2558,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2559,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2560,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2562,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2563,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2564,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2565,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2566,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2668,
+      "change": "tensor where for additive DSRF"
+    },
+    {
+      "line": 2758,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2759,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2760,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2761,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2762,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2764,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2765,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2766,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2767,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2768,
+      "change": "match parameter-free operator constructor; Self mapping unchanged"
+    },
+    {
+      "line": 2830,
+      "change": "tensor where for additive DSRF"
+    },
+    {
+      "line": 102,
+      "change": "nonmutating row-min masking: knn_HGCNN_cov"
+    },
+    {
+      "line": 157,
+      "change": "nonmutating row-min masking: knn_HGCNN"
+    },
+    {
+      "line": 851,
+      "change": "nonmutating row-min masking: knn_HGCNN_norm"
+    },
+    {
+      "line": 902,
+      "change": "nonmutating row-min masking: knn_HGCNN_geo"
+    },
+    {
+      "line": 951,
+      "change": "nonmutating row-min masking: knn_HGCNN_norm_geo"
+    }
+  ],
+  "additional_edits": [
+    "PointNet squeeze(-1) retains singleton batch axis",
+    "PointNet++ geodesic topk uses largest negative distance",
+    "FPS starts at farthest point from centroid instead of random index, for deterministic evaluation",
+    "PointNet++ masking uses torch.where",
+    "models.py reconstructs broken/missing PointNet and DGCNN covariance input adapters with 12 channels",
+    "DSRF-only uses Graphcnn backbone with standard edges in all five local layers"
+  ],
+  "identity": "Prospective implementation from supplied files with recorded repairs; not a recovered historical snapshot.",
+  "mvgcn_reference": "https://github.com/wyn430/MVGCN (README maps hgcnn to MVGCN; local HGCNN supplied by author)"
+}

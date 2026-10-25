@@ -1,0 +1,53 @@
+{
+  "stage": "main",
+  "epochs": 250,
+  "batch_size": 25,
+  "threads": 4,
+  "seeds": [
+    24,
+    42,
+    2026
+  ],
+  "planned_runs": 36,
+  "scope": "Revised matched coordinate/Euclidean model; not a historical or normal/geodesic reproduction",
+  "smoke": {
+    "scope": "GPU environment and full-size training-step check, not scientific accuracy",
+    "python": "3.8.20 (default, Oct  3 2024, 15:24:27) \n[GCC 11.2.0]",
+    "python_executable": "python",
+    "torch": "2.4.1",
+    "numpy": "1.24.3",
+    "cuda_runtime": "11.8",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "gpu_memory_bytes": 84974239744,
+    "batch_size": 25,
+    "points_per_cloud": 2000,
+    "checks": [
+      {
+        "operator": "standard",
+        "two_steps_seconds": 5.707466686144471,
+        "peak_allocated_bytes": 25710716928,
+        "parameters": 2416899,
+        "finite_gradients": true
+      },
+      {
+        "operator": "hard",
+        "two_steps_seconds": 4.27118055196479,
+        "peak_allocated_bytes": 25712681472,
+        "parameters": 2416899,
+        "finite_gradients": true
+      },
+      {
+        "operator": "soft",
+        "two_steps_seconds": 4.003069693222642,
+        "peak_allocated_bytes": 28378650624,
+        "parameters": 2416899,
+        "finite_gradients": true
+      }
+    ]
+  },
+  "code_sha256": {
+    "run_gpu.py": "e250aad4a0f09f825e6272d6a324f048a80723fd9ec24d48bb7550c58085693c",
+    "train_revised.py": "61eae004c97155268d10953fa1e3e8c87327662d55030b7c1e7234a0aa5be68b",
+    "revised_graph.py": "0c0a093567280dcdc30a453f23cdfdb65a5ad20d9145c86eca741f7b682e847f"
+  }
+}

@@ -1,0 +1,53 @@
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+
+# Local environments and credentials
+.venv/
+venv/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# New experiments and verification outputs
+/new_runs/
+/new_statistics_check/
+/new_inference_check/
+/new_figures/
+/generated/
+/code/complete/results/
+/code/uniform/results/
+/code/components/gpu_results/
+*.log
+*.lock
+*.tmp
+
+# Large separately distributed inputs/checkpoints and full scans
+/recovered_checkpoints/
+/downloaded_geo/
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar
+*.tar.gz
+*.ply
+/code/complete/data/surface/geo/
+/code/complete/data/real/geo/
+/code/complete/data/
+/code/uniform/data/
+/code/components/data/
+/retained_results/
+
+# Private working evidence is never part of the release
+/internal_audit/
+/private/
+/correspondence/

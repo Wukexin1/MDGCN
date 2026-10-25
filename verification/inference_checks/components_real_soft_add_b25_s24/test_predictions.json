@@ -1,0 +1,537 @@
+{
+  "class_names": [
+    "dent",
+    "normal",
+    "uneven"
+  ],
+  "rows": [
+    {
+      "id": "dent_dent10",
+      "source_id": "dent_dent10",
+      "truth": 0,
+      "prediction": 2,
+      "probabilities": [
+        0.2359568327665329,
+        0.17142635583877563,
+        0.592616856098175
+      ]
+    },
+    {
+      "id": "dent_dent11",
+      "source_id": "dent_dent11",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.6156761050224304,
+        0.11460188031196594,
+        0.26972201466560364
+      ]
+    },
+    {
+      "id": "dent_dent14",
+      "source_id": "dent_dent14",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8439023494720459,
+        0.09984971582889557,
+        0.05624792352318764
+      ]
+    },
+    {
+      "id": "dent_dent15",
+      "source_id": "dent_dent15",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.7408077120780945,
+        0.2367025464773178,
+        0.022489720955491066
+      ]
+    },
+    {
+      "id": "dent_dent17",
+      "source_id": "dent_dent17",
+      "truth": 0,
+      "prediction": 1,
+      "probabilities": [
+        0.30101487040519714,
+        0.6249495148658752,
+        0.07403557747602463
+      ]
+    },
+    {
+      "id": "dent_dent19",
+      "source_id": "dent_dent19",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.7806731462478638,
+        0.12443681061267853,
+        0.0948900356888771
+      ]
+    },
+    {
+      "id": "dent_dent23",
+      "source_id": "dent_dent23",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8282859921455383,
+        0.13623002171516418,
+        0.03548398241400719
+      ]
+    },
+    {
+      "id": "dent_dent25",
+      "source_id": "dent_dent25",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.9029898047447205,
+        0.07396501302719116,
+        0.023045208305120468
+      ]
+    },
+    {
+      "id": "dent_dent28",
+      "source_id": "dent_dent28",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.5030034184455872,
+        0.10135030746459961,
+        0.395646333694458
+      ]
+    },
+    {
+      "id": "dent_dent32",
+      "source_id": "dent_dent32",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.811995267868042,
+        0.10709726065397263,
+        0.08090737462043762
+      ]
+    },
+    {
+      "id": "dent_dent33",
+      "source_id": "dent_dent33",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8835006356239319,
+        0.08420504629611969,
+        0.03229432553052902
+      ]
+    },
+    {
+      "id": "dent_dent34",
+      "source_id": "dent_dent34",
+      "truth": 0,
+      "prediction": 2,
+      "probabilities": [
+        0.3312889039516449,
+        0.09236837178468704,
+        0.5763427019119263
+      ]
+    },
+    {
+      "id": "dent_dent35",
+      "source_id": "dent_dent35",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.5264102816581726,
+        0.23911039531230927,
+        0.2344793677330017
+      ]
+    },
+    {
+      "id": "dent_dent37",
+      "source_id": "dent_dent37",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8057363629341125,
+        0.1132252961397171,
+        0.08103835582733154
+      ]
+    },
+    {
+      "id": "dent_dent6",
+      "source_id": "dent_dent6",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.829164981842041,
+        0.11428775638341904,
+        0.056547265499830246
+      ]
+    },
+    {
+      "id": "normal_normal1",
+      "source_id": "normal_normal1",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.11807436496019363,
+        0.8231091499328613,
+        0.05881652981042862
+      ]
+    },
+    {
+      "id": "normal_normal12",
+      "source_id": "normal_normal12",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.001072452636435628,
+        0.9977695941925049,
+        0.0011580383870750666
+      ]
+    },
+    {
+      "id": "normal_normal14",
+      "source_id": "normal_normal14",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.08055512607097626,
+        0.8692143559455872,
+        0.05023052170872688
+      ]
+    },
+    {
+      "id": "normal_normal15",
+      "source_id": "normal_normal15",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.010889549739658833,
+        0.9811878800392151,
+        0.007922482676804066
+      ]
+    },
+    {
+      "id": "normal_normal16",
+      "source_id": "normal_normal16",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.04663080722093582,
+        0.9052098989486694,
+        0.04815928265452385
+      ]
+    },
+    {
+      "id": "normal_normal17",
+      "source_id": "normal_normal17",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.022606197744607925,
+        0.9591922163963318,
+        0.018201660364866257
+      ]
+    },
+    {
+      "id": "normal_normal18",
+      "source_id": "normal_normal18",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.11025016754865646,
+        0.8437462449073792,
+        0.046003520488739014
+      ]
+    },
+    {
+      "id": "normal_normal24",
+      "source_id": "normal_normal24",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.06578326225280762,
+        0.8934897184371948,
+        0.04072698578238487
+      ]
+    },
+    {
+      "id": "normal_normal25",
+      "source_id": "normal_normal25",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.1321507841348648,
+        0.7642979621887207,
+        0.10355128347873688
+      ]
+    },
+    {
+      "id": "normal_normal29",
+      "source_id": "normal_normal29",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.05323666334152222,
+        0.8653139472007751,
+        0.08144932985305786
+      ]
+    },
+    {
+      "id": "normal_normal3",
+      "source_id": "normal_normal3",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.18723589181900024,
+        0.5544942617416382,
+        0.25826990604400635
+      ]
+    },
+    {
+      "id": "normal_normal33",
+      "source_id": "normal_normal33",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.09716535359621048,
+        0.7584429383277893,
+        0.1443917602300644
+      ]
+    },
+    {
+      "id": "normal_normal34",
+      "source_id": "normal_normal34",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.05084092915058136,
+        0.8792194128036499,
+        0.06993964314460754
+      ]
+    },
+    {
+      "id": "normal_normal40",
+      "source_id": "normal_normal40",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.06988602876663208,
+        0.8758596777915955,
+        0.05425436049699783
+      ]
+    },
+    {
+      "id": "normal_normal5",
+      "source_id": "normal_normal5",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.034037210047245026,
+        0.9434915781021118,
+        0.022471224889159203
+      ]
+    },
+    {
+      "id": "normal_normal9",
+      "source_id": "normal_normal9",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.032036442309617996,
+        0.9484773874282837,
+        0.019486136734485626
+      ]
+    },
+    {
+      "id": "uneven_uneven1",
+      "source_id": "uneven_uneven1",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.05763400346040726,
+        0.05742513760924339,
+        0.8849409222602844
+      ]
+    },
+    {
+      "id": "uneven_uneven11",
+      "source_id": "uneven_uneven11",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.0881689041852951,
+        0.08767703920602798,
+        0.8241540193557739
+      ]
+    },
+    {
+      "id": "uneven_uneven16",
+      "source_id": "uneven_uneven16",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.0738789364695549,
+        0.1171003058552742,
+        0.8090206980705261
+      ]
+    },
+    {
+      "id": "uneven_uneven19",
+      "source_id": "uneven_uneven19",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.026895035058259964,
+        0.10838232934474945,
+        0.8647226691246033
+      ]
+    },
+    {
+      "id": "uneven_uneven2",
+      "source_id": "uneven_uneven2",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.24855805933475494,
+        0.09764595329761505,
+        0.6537960171699524
+      ]
+    },
+    {
+      "id": "uneven_uneven20",
+      "source_id": "uneven_uneven20",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.006898661609739065,
+        0.012155796401202679,
+        0.9809455871582031
+      ]
+    },
+    {
+      "id": "uneven_uneven23",
+      "source_id": "uneven_uneven23",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.03473301976919174,
+        0.056054044514894485,
+        0.9092129468917847
+      ]
+    },
+    {
+      "id": "uneven_uneven25",
+      "source_id": "uneven_uneven25",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.0003799116821028292,
+        0.0003278790391050279,
+        0.9992921352386475
+      ]
+    },
+    {
+      "id": "uneven_uneven26",
+      "source_id": "uneven_uneven26",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.062340423464775085,
+        0.031591061502695084,
+        0.9060685038566589
+      ]
+    },
+    {
+      "id": "uneven_uneven30",
+      "source_id": "uneven_uneven30",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.03082095831632614,
+        0.010187693871557713,
+        0.9589913487434387
+      ]
+    },
+    {
+      "id": "uneven_uneven36",
+      "source_id": "uneven_uneven36",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.02378561720252037,
+        0.05882536619901657,
+        0.9173890352249146
+      ]
+    },
+    {
+      "id": "uneven_uneven37",
+      "source_id": "uneven_uneven37",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.11303519457578659,
+        0.05305127799510956,
+        0.8339135050773621
+      ]
+    },
+    {
+      "id": "uneven_uneven40",
+      "source_id": "uneven_uneven40",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.2895057797431946,
+        0.08274813741445541,
+        0.6277461051940918
+      ]
+    },
+    {
+      "id": "uneven_uneven6",
+      "source_id": "uneven_uneven6",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.10331014543771744,
+        0.292217493057251,
+        0.6044723987579346
+      ]
+    },
+    {
+      "id": "uneven_uneven7",
+      "source_id": "uneven_uneven7",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.05617086961865425,
+        0.26426035165786743,
+        0.6795687675476074
+      ]
+    },
+    {
+      "id": "uneven_uneven8",
+      "source_id": "uneven_uneven8",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.2356763631105423,
+        0.3617132008075714,
+        0.4026104509830475
+      ]
+    },
+    {
+      "id": "uneven_uneven9",
+      "source_id": "uneven_uneven9",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.1462571769952774,
+        0.22212111949920654,
+        0.6316216588020325
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "figure": 4,
+  "source": "code/uniform/data/surface/inputs.npz",
+  "input_sha256": "42d30d64f8408440471d4bdb77eca704ca746d8bb40e6566b0d6db3cfb24d6c8",
+  "manifest_sha256": "b8b33268fe5f4ab44bae01dfaeb6dfe3b08905aed05309fc960aa9bc2acd72e2",
+  "point_mask": "mask_uniform",
+  "raster_layer_dpi": 600,
+  "camera_elevation": 25,
+  "camera_azimuth": -60,
+  "examples": [
+    {
+      "panel": 1,
+      "category": "Raised",
+      "sample_id": "raised/raised1.txt",
+      "row_index": 150,
+      "split": "train",
+      "point_count": 2000,
+      "candidate_count": 412,
+      "background_count": 1588,
+      "coordinate_array_sha256": "43322f7ab345cbd1e9acb1149f84426cad720252aff85215fb7eb5bac329dca6",
+      "mask_array_sha256": "b8b2129d70111656ebd9b4813107540703cf006fb4b739459b2b96f88b9b5482"
+    },
+    {
+      "panel": 2,
+      "category": "Dent",
+      "sample_id": "dent/dent1.txt",
+      "row_index": 50,
+      "split": "train",
+      "point_count": 2000,
+      "candidate_count": 193,
+      "background_count": 1807,
+      "coordinate_array_sha256": "a32208a84df75efaef95d9835f2b2376ce0ac45d140c2a8208722164dfebc1f8",
+      "mask_array_sha256": "eefdff6dcb0bb8911936708640dc3dfb0ec48a7c3839897cb221da872ab147ec"
+    },
+    {
+      "panel": 3,
+      "category": "Crack",
+      "sample_id": "crack/crack1.txt",
+      "row_index": 0,
+      "split": "train",
+      "point_count": 2000,
+      "candidate_count": 578,
+      "background_count": 1422,
+      "coordinate_array_sha256": "1338abcd4f18dda40e4fd16f524a15063ad87efe1d52108f70218430120cb423",
+      "mask_array_sha256": "482f98dfa365a3e715574ab3a1e7273642fdfaee69186cf298a6327231da6a66"
+    },
+    {
+      "panel": 4,
+      "category": "Normal",
+      "sample_id": "normal/normal10.txt",
+      "row_index": 101,
+      "split": "train",
+      "point_count": 2000,
+      "candidate_count": 113,
+      "background_count": 1887,
+      "coordinate_array_sha256": "49ba9c148acf548f5828b744864322f2b66d25342b03274a22c59f13328ae440",
+      "mask_array_sha256": "a18b5f80571ed2f02e5855ffdb7f46a8a8ccc439a3093cef7f1c1f1a778c109d"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "uniform_trainnormal_k20_a1p282_v1",
+  "version": 1,
+  "reason": "Author clarification: abnormal masks are surface-variation threshold candidates; normal masks are dummy partitions. Check a single automatic preprocessing rule without using class at inference.",
+  "grid": "2 datasets x 2 feature choices x 3 models x 3 seeds = 36",
+  "k0": 20,
+  "covariance_neighborhood_points": 21,
+  "coefficient": 1.282,
+  "reference": "Pooled surface variation of CURRENT train normal clouds only; population std ddof=0.",
+  "parameters_basis": "Fixed settings from completed controlled-support experiment, not a reconstruction of forgotten historical settings.",
+  "application": "All clouds use same dataset-specific threshold; no ground-truth-dependent switching.",
+  "masks": "No top-fraction adjustment or artificial insertion of candidates. All-false masks remain all-false.",
+  "graph": "Original supplied graph row-min/top-k behavior unchanged, including groups smaller than k=15.",
+  "frozen_implementations": {
+    "assembled_models.py": "1db9a69645513bd7b2053c19ebb1592fcc9525d5ff89fa2585aca8696125c947",
+    "models.py": "b7e607c09ffe09fdd186a758cb5a67bd6db54c91c0cb982957b30e75f924c8ae",
+    "train.py": "7be947b072e7613b5af1430cb4ec9ab915768f04a0dba628127c311d5715134b",
+    "data_io.py": "9c149a4f73d09b03f7e69874940597f4ba0009813a97fefd8a2b0495414fcaf5",
+    "common.py": "fce8bf47f0125ecdda9b736521eddf0b220ea8daea979210195c8dbf14e92255"
+  },
+  "unchanged_relative_to_return": true,
+  "comparison_limit": "New calibration and grouping affect all classes; differences cannot be attributed only to replacing normal dummy labels.",
+  "no_new_test_selection": "Validation OA then validation ordinary CE; test evaluated after all epochs only.",
+  "calibration_counts": {
+    "surface": 31,
+    "real": 19
+  }
+}

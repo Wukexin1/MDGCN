@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "verification": "Metrics and display values recalculated from retained predictions, history and configuration.",
+  "training_executed": false,
+  "inference_executed": false,
+  "figure_rendering_executed": false,
+  "python_version": "3.9.13",
+  "numpy_version": "1.26.4",
+  "expected_manifest_sha256": "7123672994ad8ff67bc42a2e6250827744fa0fca6e4c1d3849c4ad4cce4b82e0",
+  "counts": {
+    "expected_runs": 471,
+    "verified_runs": 471,
+    "expected_groups": 157,
+    "verified_groups": 157,
+    "expected_prediction_rows": 75630,
+    "verified_prediction_rows": 75630,
+    "performance_display_checks": 630,
+    "performance_display_matches": 630,
+    "candidate_display_checks": 30,
+    "candidate_display_matches": 30,
+    "runs_with_checkpoint": 0,
+    "issues": 0
+  },
+  "interpretation": {
+    "metric_scale": "run_metrics.csv uses fractions; group summaries and displayed mean/SD use percentages.",
+    "standard_deviation": "Sample SD across the three training seeds, ddof=1, on the same fixed data split.",
+    "candidate_counts": "Saved per-point-cloud counts only; masks and covariance matrices were not recomputed."
+  },
+  "limits": [
+    "This statistics check does not execute training, inference or figure rendering.",
+    "runs_with_checkpoint counts files inside retained result directories; separately distributed checkpoints are not counted.",
+    "Current checkpoint coverage and separate inference/rendering entry points are documented in docs/RELEASE_STATUS.txt."
+  ],
+  "issues": []
+}

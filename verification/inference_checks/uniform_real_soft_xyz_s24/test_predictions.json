@@ -1,0 +1,489 @@
+{
+  "class_names": [
+    "Dent",
+    "Normal",
+    "Uneven"
+  ],
+  "rows": [
+    {
+      "id": "dent/dent10.txt",
+      "truth": 0,
+      "prediction": 2,
+      "probabilities": [
+        0.2812565863132477,
+        0.19273430109024048,
+        0.5260090827941895
+      ]
+    },
+    {
+      "id": "dent/dent11.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.5902854800224304,
+        0.027075285091996193,
+        0.38263922929763794
+      ]
+    },
+    {
+      "id": "dent/dent14.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.9501510262489319,
+        0.03522779420018196,
+        0.014621120877563953
+      ]
+    },
+    {
+      "id": "dent/dent15.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.9531225562095642,
+        0.0362011194229126,
+        0.010676282458007336
+      ]
+    },
+    {
+      "id": "dent/dent17.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.6469982266426086,
+        0.2970788776874542,
+        0.05592285096645355
+      ]
+    },
+    {
+      "id": "dent/dent19.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.732503354549408,
+        0.09985335916280746,
+        0.1676432490348816
+      ]
+    },
+    {
+      "id": "dent/dent23.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.6294187307357788,
+        0.3432547450065613,
+        0.027326559647917747
+      ]
+    },
+    {
+      "id": "dent/dent25.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8853188753128052,
+        0.10343745350837708,
+        0.011243571527302265
+      ]
+    },
+    {
+      "id": "dent/dent28.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8392826914787292,
+        0.017096074298024178,
+        0.14362123608589172
+      ]
+    },
+    {
+      "id": "dent/dent32.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.8473947644233704,
+        0.0831691101193428,
+        0.06943612545728683
+      ]
+    },
+    {
+      "id": "dent/dent33.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.9664170145988464,
+        0.02858767844736576,
+        0.004995349328964949
+      ]
+    },
+    {
+      "id": "dent/dent34.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.6186321377754211,
+        0.10353504121303558,
+        0.2778328061103821
+      ]
+    },
+    {
+      "id": "dent/dent35.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.5883556604385376,
+        0.3148952126502991,
+        0.0967491939663887
+      ]
+    },
+    {
+      "id": "dent/dent37.txt",
+      "truth": 0,
+      "prediction": 0,
+      "probabilities": [
+        0.850217342376709,
+        0.09908422082662582,
+        0.05069847032427788
+      ]
+    },
+    {
+      "id": "dent/dent6.txt",
+      "truth": 0,
+      "prediction": 1,
+      "probabilities": [
+        0.3545600473880768,
+        0.560887336730957,
+        0.0845525786280632
+      ]
+    },
+    {
+      "id": "normal/normal1.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.01395067386329174,
+        0.9655101299285889,
+        0.020539220422506332
+      ]
+    },
+    {
+      "id": "normal/normal12.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.005188922397792339,
+        0.9834672808647156,
+        0.011343737132847309
+      ]
+    },
+    {
+      "id": "normal/normal14.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.004841452930122614,
+        0.9847201108932495,
+        0.010438531637191772
+      ]
+    },
+    {
+      "id": "normal/normal15.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.000708297360688448,
+        0.9708048105239868,
+        0.0284869484603405
+      ]
+    },
+    {
+      "id": "normal/normal16.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.00518238777294755,
+        0.9545256495475769,
+        0.04029197618365288
+      ]
+    },
+    {
+      "id": "normal/normal17.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.006889438256621361,
+        0.9765735864639282,
+        0.016537033021450043
+      ]
+    },
+    {
+      "id": "normal/normal18.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.03097127564251423,
+        0.9309179782867432,
+        0.038110729306936264
+      ]
+    },
+    {
+      "id": "normal/normal24.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.0052618891932070255,
+        0.9836375117301941,
+        0.01110070664435625
+      ]
+    },
+    {
+      "id": "normal/normal25.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.01171620562672615,
+        0.9701513648033142,
+        0.018132397904992104
+      ]
+    },
+    {
+      "id": "normal/normal29.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.028078963980078697,
+        0.8904086947441101,
+        0.08151234686374664
+      ]
+    },
+    {
+      "id": "normal/normal3.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.03547601401805878,
+        0.7592618465423584,
+        0.20526215434074402
+      ]
+    },
+    {
+      "id": "normal/normal33.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.021891744807362556,
+        0.8997306227684021,
+        0.07837758213281631
+      ]
+    },
+    {
+      "id": "normal/normal34.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.020858783274888992,
+        0.8775827288627625,
+        0.10155853629112244
+      ]
+    },
+    {
+      "id": "normal/normal40.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.0012146399822086096,
+        0.9807581901550293,
+        0.018027182668447495
+      ]
+    },
+    {
+      "id": "normal/normal5.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.007276294752955437,
+        0.939164400100708,
+        0.05355926230549812
+      ]
+    },
+    {
+      "id": "normal/normal9.txt",
+      "truth": 1,
+      "prediction": 1,
+      "probabilities": [
+        0.006801501847803593,
+        0.9791156053543091,
+        0.014082909561693668
+      ]
+    },
+    {
+      "id": "uneven/uneven1.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.09374010562896729,
+        0.36174336075782776,
+        0.5445165634155273
+      ]
+    },
+    {
+      "id": "uneven/uneven11.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.12264543771743774,
+        0.283419132232666,
+        0.5939353704452515
+      ]
+    },
+    {
+      "id": "uneven/uneven16.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.0035376762971282005,
+        0.00586343090981245,
+        0.9905988574028015
+      ]
+    },
+    {
+      "id": "uneven/uneven19.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.03459040820598602,
+        0.21822503209114075,
+        0.7471845149993896
+      ]
+    },
+    {
+      "id": "uneven/uneven2.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.14938072860240936,
+        0.0489647313952446,
+        0.801654577255249
+      ]
+    },
+    {
+      "id": "uneven/uneven20.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.0011785958195105195,
+        0.002038156148046255,
+        0.9967832565307617
+      ]
+    },
+    {
+      "id": "uneven/uneven23.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.06979066878557205,
+        0.18927007913589478,
+        0.7409393191337585
+      ]
+    },
+    {
+      "id": "uneven/uneven25.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.0064751324243843555,
+        0.0024436041712760925,
+        0.9910812973976135
+      ]
+    },
+    {
+      "id": "uneven/uneven26.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.3316269516944885,
+        0.13253751397132874,
+        0.5358355641365051
+      ]
+    },
+    {
+      "id": "uneven/uneven30.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.012165559455752373,
+        0.0014198505086824298,
+        0.9864146113395691
+      ]
+    },
+    {
+      "id": "uneven/uneven36.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.029894961044192314,
+        0.1161198690533638,
+        0.8539851307868958
+      ]
+    },
+    {
+      "id": "uneven/uneven37.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.2744855284690857,
+        0.04771480709314346,
+        0.677799642086029
+      ]
+    },
+    {
+      "id": "uneven/uneven40.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.1412893384695053,
+        0.03922252357006073,
+        0.8194881081581116
+      ]
+    },
+    {
+      "id": "uneven/uneven6.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.07841848582029343,
+        0.20871713757514954,
+        0.7128643989562988
+      ]
+    },
+    {
+      "id": "uneven/uneven7.txt",
+      "truth": 2,
+      "prediction": 1,
+      "probabilities": [
+        0.016719944775104523,
+        0.5881335735321045,
+        0.3951464593410492
+      ]
+    },
+    {
+      "id": "uneven/uneven8.txt",
+      "truth": 2,
+      "prediction": 2,
+      "probabilities": [
+        0.28261613845825195,
+        0.1269555389881134,
+        0.5904282927513123
+      ]
+    },
+    {
+      "id": "uneven/uneven9.txt",
+      "truth": 2,
+      "prediction": 1,
+      "probabilities": [
+        0.09838138520717621,
+        0.6077730655670166,
+        0.2938455045223236
+      ]
+    }
+  ]
+}
