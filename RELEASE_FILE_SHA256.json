@@ -1,6 +1,6 @@
 {
-  "status": "Local working release; not uploaded",
-  "date": "2026-10-25",
+  "status": "Public code and prepared-input release; see docs/RELEASE_STATUS.txt for asset availability",
+  "date": "2026-11-16",
   "files": [
     {
       "file": ".gitignore",
@@ -9,18 +9,18 @@
     },
     {
       "file": "DATA_ASSETS_PENDING.txt",
-      "bytes": 2579,
-      "sha256": "1c06b4ec60fc1e0e68836af04a767fd0139370e99ab64785bdbca9179054f7bc"
+      "bytes": 828,
+      "sha256": "565696de03b3101b0787d88a41fdb30af395981f57d546b8aa4df96e1dc02c46"
     },
     {
       "file": "README.md",
-      "bytes": 10367,
-      "sha256": "ee55b662f334a4ae50831dcfc8de2ec30db1de27291a5490b3ffe54c463808c3"
+      "bytes": 10697,
+      "sha256": "855a7673283fa86d7bdb227800103bc08c7a3da1c0983d68921f37d86917f5f7"
     },
     {
       "file": "README.txt",
-      "bytes": 807,
-      "sha256": "4bac5c04f70f98c5bccaa96ea44dbab2e4bfef928f38c2a81f40f7f437c82a5c"
+      "bytes": 723,
+      "sha256": "fe94db14451c5f0a5b5238e52f1ef7776547f04f2b6a64b2850067f3c312f1c9"
     },
     {
       "file": "THIRD_PARTY_NOTICES.md",
@@ -7454,13 +7454,13 @@
     },
     {
       "file": "docs/DATA.md",
-      "bytes": 7381,
-      "sha256": "c85cb9ba1f8f82829a8e4e72e2c2e27f920298b345eb9637e84d075b0a2f5e33"
+      "bytes": 6994,
+      "sha256": "168842b6ecf782dfe94e9a293ae36c471f4c21576c5a03daddc6524e125b8bd6"
     },
     {
       "file": "docs/DOWNLOADS.md",
-      "bytes": 2797,
-      "sha256": "3af18f72d0235c4a0ae61b36fa72917589501a36b89ccce0cc44dca5e99b801f"
+      "bytes": 3222,
+      "sha256": "966c19cdd729461baaca976d5c6eb86a065c769665135d5148558531fe439698"
     },
     {
       "file": "docs/ENVIRONMENT.md",
@@ -7469,8 +7469,8 @@
     },
     {
       "file": "docs/RELEASE_STATUS.txt",
-      "bytes": 2858,
-      "sha256": "164354948eeb5a13d13df1026c74988988b195b4607c469d17fffcb93502b16a"
+      "bytes": 1865,
+      "sha256": "d35e7f528a59c6293ee38c818e30be97bcb68bc90e9c77b71e1d3b1c7bd62c3e"
     },
     {
       "file": "docs/figures.txt",

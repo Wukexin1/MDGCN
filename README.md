@@ -1,18 +1,16 @@
 # MDGCN
 
-Code and data for **Multi-view Dynamic Graph Deep Learning for Surface Defect Identification from 3D Point Cloud**, by Kexin Wu, Xing Wang and Xiaowei Yue, conditionally accepted by *IISE Transactions* (UIIE-9011.R2).
+Code and data for **Multi-view Dynamic Graph Deep Learning for Surface Defect Identification from 3D Point Cloud**, by Kexin Wu, Xing Wang and Xiaowei Yue, accepted for publication in *IISE Transactions* (UIIE-9011.R3).
 
-The materials are being prepared in the private [Wukexin1/MDGCN](https://github.com/Wukexin1/MDGCN) repository for a public release. Data and checkpoint download links will be added after the archives have been uploaded and checked.
+The training code, analysis scripts and figure-generation tools are available in this repository. The [reproducibility release](https://github.com/Wukexin1/MDGCN/releases/tag/iise-repro-20261116) provides the prepared inputs, fixed splits, training records and saved predictions.
 
-The source archive contains code and documentation. Extract the prepared-input and saved-result archive into the same directory before running the commands below. Checkpoints and geodesic matrices are separate downloads. See [archive contents and extraction](docs/DOWNLOADS.md).
+Download or clone the code, then extract the [inputs and results archive](https://github.com/Wukexin1/MDGCN/releases/download/iise-repro-20261116/MDGCN_inputs_and_results_20261025.zip) into the repository root before running the commands below. Geodesic experiments use the original distance files provided with MVGCN. See [data downloads and extraction](docs/DOWNLOADS.md).
 
 | Material | Link |
 |---|---|
-| Code repository | [Wukexin1/MDGCN](https://github.com/Wukexin1/MDGCN) — private during preparation; public release planned |
-| Prepared inputs and fixed data splits | `[VERSIONED_DATA_URL_PENDING]` |
-| Geodesic distance cache | `[GEODESIC_CACHE_URL_PENDING]` |
-| Selected model checkpoints | `[CHECKPOINT_URL_PENDING]` |
-| Article | `[FINAL_ARTICLE_URL_PENDING]` |
+| Code repository | [Wukexin1/MDGCN](https://github.com/Wukexin1/MDGCN) |
+| Prepared inputs, fixed splits and saved results | [Versioned download](https://github.com/Wukexin1/MDGCN/releases/download/iise-repro-20261116/MDGCN_inputs_and_results_20261025.zip) |
+| Original data and geodesic distances | [MVGCN data links and import instructions](docs/DOWNLOADS.md#geodesic-distance-files) |
 
 ## Data
 
@@ -30,7 +28,7 @@ The experiments use seeds 24, 42 and 2026 and 250 training epochs. Complete and 
 
 In complete and uniform, `hard` denotes MDGCN1 and `soft` denotes MDGCN2. The other model names are `pointnet`, `pointnet2`, `dgcnn`, `mvgcn` and, in the controlled-fraction study, `dsrf`. In components, `standard`, `hard` and `soft` choose the local operator, while `replace` and `add` choose fusion. The figure and table mapping is in `analysis/figure_table_mapping.json`.
 
-The saved results and selected checkpoints cover all 471 runs: 363 complete, 36 uniform and 72 components. Independent SHA-256 checks matched every checkpoint to its saved run record. The four checkpoint archives are extracted independently into the repository root. See [release status](docs/RELEASE_STATUS.txt) for the verification record.
+The saved results cover all 471 runs: 363 complete, 36 uniform and 72 components. The public package includes their configurations, training histories and predictions. Historical checkpoints were verified locally against the run records and are not included in this release. The training programs generate new checkpoints from the supplied inputs and settings. See [release status](docs/RELEASE_STATUS.txt).
 
 ## Environment
 
@@ -59,7 +57,7 @@ python tools/plot_figures.py --output generated/figures
 
 This produces Figures 4 and 6 as PDF and 600 dpi PNG, with the sample IDs and curve values. Figure 4 uses the prepared synthetic inputs; Figure 6 uses 45 saved controlled-fraction runs. Select one figure with `--figure 4` or `--figure 6`. Figures 1–3 and the original scan views in Figure 5 are retained in `figure_assets/`. See [figure documentation](docs/figures.txt).
 
-## Evaluate a saved model
+## Evaluate a saved model checkpoint
 
 List the run IDs and check the required inputs:
 
@@ -71,7 +69,7 @@ python tools/evaluate_saved.py \
   --check-inputs
 ```
 
-Extract the checkpoint archives into the repository root, as described in [DOWNLOADS.md](docs/DOWNLOADS.md). The resulting path is `recovered_checkpoints/complete/runs/<run_id>/selected.pt`. Then run:
+The following example checks a historical checkpoint if you already hold the matching file. Historical checkpoints are not bundled with this release. Place the file at `recovered_checkpoints/complete/runs/<run_id>/selected.pt`, then run:
 
 ```bash
 python tools/evaluate_saved.py \
@@ -87,7 +85,7 @@ The evaluator verifies the checkpoint and input hashes, uses the recorded settin
 
 Four selected historical models have been evaluated locally on their complete test splits: synthetic PointNet, synthetic MDGCN1, real-data MDGCN2, and a real-data component run with soft aggregation and add fusion at batch size 25. All use seed 24 and coordinate inputs. Their 176 predicted categories agree with the saved results. This CPU check used PyTorch 2.6.0; the training runs used CUDA and PyTorch 2.4.1. Probability differences and measured times are recorded in `verification/inference_summary.json`.
 
-Geodesic runs also need the separate distance cache in `code/complete/data/surface/geo/` and `code/complete/data/real/geo/`. Its placement and checksum are documented in [DATA.md](docs/DATA.md).
+Geodesic runs also need the distance cache in `code/complete/data/surface/geo/` and `code/complete/data/real/geo/`. Import it from the original MVGCN distance files using the instructions in [DOWNLOADS.md](docs/DOWNLOADS.md#geodesic-distance-files). The importer checks the recorded file hashes.
 
 ## Train the models
 
@@ -95,7 +93,7 @@ Run each block from the repository root in the environment described above. Each
 
 ### Complete suite
 
-Place the geodesic cache before starting the full suite.
+Import the geodesic distance files before starting the full suite.
 
 ```bash
 cd code/complete
@@ -145,4 +143,4 @@ Wang, Y., Sun, W., Jin, J., Kong, Z., and Yue, X. (2023). **MVGCN: Multi-View Gr
 
 Wu, K., Wang, X., and Yue, X. **Multi-view Dynamic Graph Deep Learning for Surface Defect Identification from 3D Point Cloud.** *IISE Transactions*. Publication details will be added when available.
 
-Please cite both works when using these materials. Third-party code attribution is in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The authors' code license will be added before publication; the original datasets retain their source attribution and terms.
+Please cite both works when using these materials. Third-party code attribution is in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The original datasets retain their source attribution and terms.

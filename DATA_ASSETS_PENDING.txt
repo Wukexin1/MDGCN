@@ -1,43 +1,17 @@
-LOCAL CANDIDATE ONLY — NOT PUBLISHED
+Data and model asset availability — 16 November 2026
 
-Use the MVGCN links for original datasets. The provider has agreed that the
-additional prepared inputs and splits for this study may be shared. Public
-archive links and code-license provenance remain to be finalized. See docs/DATA.md.
-The following asset identifiers map to the private internal inventory. No personal source paths are included here.
+Prepared inputs, fixed splits and saved results:
+https://github.com/Wukexin1/MDGCN/releases/download/iise-repro-20261116/MDGCN_inputs_and_results_20261025.zip
 
-geodesic_cache_v1
-  Stored separately in MDGCN_geodesic_001.zip through MDGCN_geodesic_004.zip.
-  See docs/DOWNLOADS.md for extraction and SHA256SUMS.txt for ZIP checksums.
-  Contains 320 float32 distance matrices, 5,120,040,960 bytes unpacked.
-  Required locations: code/complete/data/surface/geo/ and code/complete/data/real/geo/.
-  The complete tables/neighbors jobs with geodesic variants require this asset.
+Original geodesic distances:
+Use the MVGCN source folders and the hash-checked import command documented in
+docs/DOWNLOADS.md. The separate local cache ZIPs are not part of this release.
 
-raw_scan_front
-  Front_fusion_30.ply is not included. Size: 447,391,534 bytes.
-  Historical SHA256: 0f54932b9eb457e9977b9c86d19bf5afe80e1385043b6b6f0aa9d85356fcb6b9
-  Excluded from the planned public release, following the provider's recommendation.
-  Not needed for the staged patch-level classification inputs.
+Historical model checkpoints:
+The 471 historical checkpoints were checked locally but are not included in
+this release. Training programs, fixed inputs and recorded settings are
+provided. Recalculating statistics from retained predictions does not require
+these checkpoints.
 
-selected_checkpoints
-  All 471 checkpoints are available: 363 complete, 36 uniform and 72 components,
-  totaling 4,099,766,181 bytes. Every checkpoint passed an independent SHA256
-  check against its historical run record. They are distributed in four
-  independent archives, MDGCN_checkpoints_001.zip through _004.zip. Extract
-  each into the repository root. See docs/DOWNLOADS.md and docs/RELEASE_STATUS.txt.
-
-raw_data
-  Original source TXT, masks and historical geometry-generation assets are not included.
-  Frozen NPZ inputs are included. Metadata raw_data/... values identify provenance, not staged files.
-  Rebuilding from original scans/crops requires the corresponding authorized upstream assets.
-
-Private correspondence, author information, manuscripts, original private README files,
-obsolete runs, and full GPU console logs are excluded. The 471 final result records
-have been staged separately in retained_results/ with their own file manifest.
-
-The component and complete controlled-data caches are stored as separate physical copies
-to retain a portable directory layout. Their source bytes were compared before staging.
-No symbolic links are used.
-
-Path-only sanitization changes some data-manifest hashes and generated run identifiers.
-staging_manifest.json maps source and candidate hashes. New training writes new run directories;
-do not place historic result/checkpoint directories into those paths and claim an unchanged resume identity.
+The complete Front_fusion_30.ply scan and private correspondence are excluded.
+The original scan-view illustrations are retained in figure_assets/.

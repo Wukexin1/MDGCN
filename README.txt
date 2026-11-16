@@ -1,16 +1,15 @@
 MDGCN
 
-Local draft for Wukexin1/MDGCN (https://github.com/Wukexin1/MDGCN).
+Code repository: https://github.com/Wukexin1/MDGCN
+Versioned inputs and saved results: https://github.com/Wukexin1/MDGCN/releases/tag/iise-repro-20261116
+
 Start with README.md for data sources, installation and reproduction commands.
+The release contains prepared inputs, fixed splits, training records and saved
+predictions for 471 runs. Original geodesic distance files are obtained through
+the MVGCN links and imported as described in docs/DOWNLOADS.md.
 
-The retained results and selected checkpoints cover all 471 runs: 363 complete,
-36 uniform and 72 components. Every checkpoint passed an independent SHA256
-check against its historical run record. Extract each of the four checkpoint
-ZIPs into the repository root, as described in docs/DOWNLOADS.md.
+Historical model checkpoints are not included in this release. Training code
+is provided. Statistics and figure generation use the retained predictions
+and do not require model checkpoints.
 
-Statistics, figures and saved-model evaluation have separate commands in tools/
-and analysis/. The current server record is in environment/. See
-docs/RELEASE_STATUS.txt for verification status and pending publication items.
-
-Nothing in this local draft has been uploaded. Public archive links and the
-code license will be finalized before publication.
+See docs/RELEASE_STATUS.txt for the completed verification record.

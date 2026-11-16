@@ -1,47 +1,52 @@
-# Archives and extraction
+# Downloads and extraction
 
-The archives below are prepared for the MDGCN release. [Wukexin1/MDGCN](https://github.com/Wukexin1/MDGCN) is private during preparation, with a public release planned. Download links will be added after the uploads have been completed and checked.
+The [MDGCN reproducibility release](https://github.com/Wukexin1/MDGCN/releases/tag/iise-repro-20261116) contains:
 
-| Archive | Contents |
+| File | Contents |
 |---|---|
-| `MDGCN_source_review_20261025.zip` | Code, documentation, fixed split definitions, statistical expectations and verification records |
-| `MDGCN_inputs_and_results_20261025.zip` | Prepared inputs for all three programs; configurations, histories and saved predictions for 471 runs |
-| `MDGCN_checkpoints_001.zip` | 213 complete-suite checkpoints |
-| `MDGCN_checkpoints_002.zip` | The other 150 complete-suite checkpoints |
-| `MDGCN_checkpoints_003.zip` | 36 uniform-preprocessing checkpoints |
-| `MDGCN_checkpoints_004.zip` | 72 component checkpoints: 36 at batch size 25 and 36 at batch size 32 |
-| `MDGCN_geodesic_001.zip` through `MDGCN_geodesic_004.zip` | All 320 geodesic distance matrices |
+| `MDGCN_source_20261116.zip` | Training code, documentation, analysis scripts and verification records |
+| [`MDGCN_inputs_and_results_20261025.zip`](https://github.com/Wukexin1/MDGCN/releases/download/iise-repro-20261116/MDGCN_inputs_and_results_20261025.zip) | Prepared inputs, fixed splits, configurations, training histories and saved predictions for 471 runs |
+| `SHA256SUMS.txt` | SHA-256 checksums for the two archives |
 
-Extract the source archive into a new directory. Extract the other archives into that same directory, where `README.md` and `code/` reside. Each ZIP is independent; do not concatenate them. The source files, prepared inputs, checkpoint files and distance matrices have separate paths, so they can be extracted in any order after the source archive.
-
-For example, from the directory containing the downloaded archives:
+If the code has already been cloned or downloaded, extract the inputs archive into its root, where `README.md` and `code/` reside:
 
 ```bash
-python -m zipfile -e MDGCN_source_review_20261025.zip MDGCN
-python -m zipfile -e MDGCN_inputs_and_results_20261025.zip MDGCN
-python -m zipfile -e MDGCN_checkpoints_001.zip MDGCN
-python -m zipfile -e MDGCN_checkpoints_002.zip MDGCN
-python -m zipfile -e MDGCN_checkpoints_003.zip MDGCN
-python -m zipfile -e MDGCN_checkpoints_004.zip MDGCN
+python -m zipfile -e MDGCN_inputs_and_results_20261025.zip /path/to/MDGCN
 ```
 
-For geodesic experiments, also extract each of the four `MDGCN_geodesic_*.zip` files with the same command and destination. They are not needed for Euclidean inference or for recalculating statistics from saved predictions.
+To start from the source archive instead:
 
-The resulting layout is:
+```bash
+python -m zipfile -e MDGCN_source_20261116.zip MDGCN
+python -m zipfile -e MDGCN_inputs_and_results_20261025.zip MDGCN
+```
+
+Each archive is independent. The result contains `code/complete/data/`, `code/uniform/data/`, `code/components/data/`, and `retained_results/`. The analysis and figure-generation commands in README.md use these files directly.
+
+## Geodesic distance files
+
+Download the original distance files through the MVGCN authors' [synthetic data folder](https://drive.google.com/drive/folders/11d5L1DJomhu_RCGtVBslECfsJv48o7AC) and [real data folder](https://drive.google.com/drive/folders/1qQh3wgQQpUl0genZ-yklOI1F4FcpuhMS). The synthetic geodesic folder is `Surface_Defects_pcd_extend_2000_geod_estnorm`; the real folder is `real_data_new_2000_geod`.
+
+The importer uses the historical local folder name ending in `_noise0001` for the synthetic data. Place or rename the downloaded synthetic geodesic folder accordingly, retaining its class subdirectories and filenames:
 
 ```text
-MDGCN/
-  README.md
-  code/complete/data/
-  code/uniform/data/
-  code/components/data/
-  retained_results/
-  recovered_checkpoints/complete/runs/<run_id>/selected.pt
-  recovered_checkpoints/uniform/runs/<run_id>/selected.pt
-  recovered_checkpoints/components/runs/<run_id>/selected.pt
-  release_manifests/
+Data/
+  Surface_Defects_pcd_extend_2000_geod_estnorm_noise0001/
+    crack/  dent/  normal/  raised/
+  real_data_new_2000_geod/
+    dent/  normal/  uneven/
 ```
 
-Geodesic matrices are placed directly under `code/complete/data/surface/geo/` and `code/complete/data/real/geo/`. The four checkpoint archives contain all 471 selected models. Their saved predictions are in `retained_results/` for statistical verification.
+Each sample requires its `.txt` point file and paired `_geodesic_dis.npz` distance file. From `code/complete`, run:
 
-`SHA256SUMS.txt` records the checksum of each archive. The per-file checksums in `release_manifests/`, the dataset manifests and the evaluation tool identify the exact inputs and model files.
+```bash
+python -c "from prepare import import_geo; import_geo('/absolute/path/to/Data', 'data')"
+```
+
+This imports the supplied distances into `data/surface/geo/` and `data/real/geo/`. It verifies the original point file, the original distance file and the converted matrix against the recorded SHA-256 values. It leaves the prepared inputs and data splits unchanged. If a file hash differs, the import stops; the recorded inputs should not be overwritten with another preprocessing variant.
+
+These matrices are needed for the complete suite's geodesic experiments. Euclidean experiments, the uniform and component protocols, saved-result statistics and Figures 4 and 6 do not require them.
+
+## Model checkpoints
+
+Historical model checkpoints are not included in this release. The training programs generate checkpoints using the supplied inputs, splits, seeds and settings. The retained predictions allow the reported statistics to be recalculated without retraining. `tools/evaluate_saved.py` can additionally check an existing historical checkpoint against its recorded hash.

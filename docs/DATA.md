@@ -8,7 +8,7 @@ The 200 synthetic and 120 real point clouds originate from the MVGCN materials s
 - [Synthetic data folder](https://drive.google.com/drive/folders/11d5L1DJomhu_RCGtVBslECfsJv48o7AC).
 - [Real data folder](https://drive.google.com/drive/folders/1qQh3wgQQpUl0genZ-yklOI1F4FcpuhMS).
 
-The data provider has permitted sharing the additional preprocessing outputs and splits prepared for this study. Original data are referenced through the provider's repository and folders. The exact experimental inputs and derived files are distributed separately at `[VERSIONED_DATA_URL_PENDING]`. Some local synthetic inputs differ from a currently linked basic synthetic variant; the frozen input arrays and their SHA-256 records identify the files used for this paper.
+The data provider has permitted sharing the additional preprocessing outputs and splits prepared for this study. Original data are referenced through the provider's repository and folders. The exact experimental inputs and derived files are distributed separately at [the versioned inputs and results archive](https://github.com/Wukexin1/MDGCN/releases/download/iise-repro-20261116/MDGCN_inputs_and_results_20261025.zip). Some local synthetic inputs differ from a currently linked basic synthetic variant; the frozen input arrays and their SHA-256 records identify the files used for this paper.
 
 Each original point cloud contains 2,000 points. File-level splits are fixed:
 
@@ -33,7 +33,7 @@ Class indices follow each manifest's `class_names` order. The same split is used
 |---|---|
 | `code/complete/data/surface/inputs.npz` | Synthetic XYZ, normals, labels and supplied/percentile/geodesic mask variants. |
 | `code/complete/data/real/inputs.npz` | Real XYZ, normals, labels and supplied/percentile/geodesic mask variants. |
-| `code/complete/data/{surface,real}/geo/` | Separate per-point-cloud geodesic matrices; populate from the archive below. |
+| `code/complete/data/{surface,real}/geo/` | Per-point-cloud geodesic matrices imported from the MVGCN source files as described below. |
 | `code/uniform/data/{surface,real}/inputs.npz` | The corresponding XYZ, normals and labels, with `surface_variation` and `mask_uniform`. |
 | `code/components/data/original_synthetic_v1/` | Per-point-cloud NPZ files and the matched-component manifest. |
 | `code/components/data/original_industrial_v1/` | Per-point-cloud NPZ files and the matched-component manifest. |
@@ -46,28 +46,13 @@ The controlled cache has 550 files derived from 50 normal source point clouds: o
 
 ## Geodesic cache
 
-The cache is distributed in four independent archives, `MDGCN_geodesic_001.zip` through `MDGCN_geodesic_004.zip`, at `[GEODESIC_CACHE_URL_PENDING]`. Together they contain 320 float32 matrices, each 2,000 × 2,000, totaling `5120040960` bytes of NPY files when unpacked. Extract all four archives into the repository root; they place the files directly at:
-
-```text
-code/complete/data/surface/geo/
-code/complete/data/real/geo/
-```
-
-All 320 matrix files were checked against the dataset manifests after packaging. The four parts retain the matrix bytes from the earlier local `IISE_geodesic_cache_v1.zip` archive (SHA-256 `dfeb61a6f4fb123325e3e7d2cf57187dbbf0abb0ec965d382462ae8263ac7482`). Archive checksums and extraction commands are supplied with the release; see [DOWNLOADS.md](DOWNLOADS.md).
+The complete suite uses 320 float32 matrices, each 2,000 × 2,000. The original distance files are provided in the MVGCN authors' data folders. Follow the [download and import instructions](DOWNLOADS.md#geodesic-distance-files) to populate `code/complete/data/surface/geo/` and `code/complete/data/real/geo/`. The importer checks the original files and converted matrices against the dataset manifests. The separately prepared local cache archives are not included in this public release.
 
 Keep the filenames unchanged. The complete runner validates every matrix against the dataset manifest. Geodesic variants use their paired coordinates, normals and masks from the frozen cache. The Euclidean arrays must not be substituted into that input variant. The uniform and component formal runs do not require geodesic matrices.
 
 ## Checkpoints and retained results
 
-Retained predictions, configurations, histories and selected checkpoints cover all 471 runs: 363 complete, 36 uniform and 72 components. Every checkpoint passed an independent check against its historical SHA-256 value. Extract all four checkpoint archives into the repository root. The paths below are relative to `recovered_checkpoints/`:
-
-```text
-complete/runs/<run_id>/selected.pt
-uniform/runs/<run_id>/selected.pt
-components/runs/<run_id>/selected.pt
-```
-
-Use `tools/evaluate_saved.py` to compare a recovered file's SHA-256 with the recorded selected-checkpoint hash. A matching filename alone does not identify a matching model. The verified checkpoint assets will be linked at `[CHECKPOINT_URL_PENDING]` when published.
+The public inputs and results archive contains the predictions, configurations and training histories for all 471 runs: 363 complete, 36 uniform and 72 components. Historical checkpoints were verified locally against their recorded SHA-256 values; these weight files are not included in the current release. The training programs and fixed inputs are provided for training the models. `tools/evaluate_saved.py` supports an additional hash and inference check when a matching historical checkpoint is supplied.
 
 ## Material excluded from public release
 

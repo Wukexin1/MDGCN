@@ -1,56 +1,34 @@
-Release preparation status — 25 October 2026
+Release status — 16 November 2026
 
-Repository: https://github.com/Wukexin1/MDGCN.
-Private during preparation, with a public release planned. Archive download
-links will be added after uploads are complete and checked.
+Repository: https://github.com/Wukexin1/MDGCN
+Release: https://github.com/Wukexin1/MDGCN/releases/tag/iise-repro-20261116
 
-Records and checkpoints
------------------------
-All 471 configurations, histories and saved predictions are retained.
-Independent local checks verified all 471 selected checkpoints against the
-historical run hashes: 363 complete, 36 uniform and 72 components. The component
-checkpoints cover 36 runs at batch size 25 and 36 at batch size 32. All returned
-archives passed integrity checks, with no duplicate or extra checkpoints.
-The prepared release has four independent checkpoint ZIPs. Four selected
-historical models have also completed the CPU checks below.
-
-Completed checks
+Public materials
 ----------------
-The statistics verifier found no discrepancies in 471 runs, 75,630 prediction
-rows, 630 displayed mean/standard-deviation pairs and 30 candidate statistics.
-Figures 4 and 6 can be regenerated with tools/plot_figures.py.
-All 471 input checks passed for their compact inputs; 60 complete-suite runs
-also require the separately stored geodesic cache.
+The repository contains the training, evaluation, analysis and plotting code.
+The release provides prepared inputs, fixed splits, configurations, training
+histories and saved predictions for all 471 runs. Original geodesic distance
+files are provided through the MVGCN source folders; docs/DOWNLOADS.md explains
+their placement and hash-checked import. Historical checkpoints are not
+included in this release. The training programs generate new checkpoints.
 
-Small CPU fixtures check all three evaluator paths and error handling.
-Four actual historical models were also evaluated: synthetic PointNet,
-synthetic MDGCN1, real-data MDGCN2, and a real-data component model with soft
-aggregation and add fusion at batch size 25. All use coordinates and seed 24.
-All 176 test predictions agree in category with the saved results. Probabilities
-are not bitwise identical. Reports record the local CPU environment and times;
-these checks are not a rerun of all 471 models or a GPU timing measurement.
+Completed local verification
+----------------------------
+The statistics verifier checked 471 runs, 75,630 prediction rows, 630 displayed
+mean/standard-deviation pairs and 30 candidate-region statistics. Figures 4
+and 6 are regenerated with tools/plot_figures.py. The 320 cached distance
+matrices and 471 historical checkpoints were verified against their manifests.
 
-Runtime records
----------------
-The retained logs cover 471 runs and 117,750 epochs. Recorded intervals sum to
-49.57 hours for complete, 6.55 hours for uniform and 21.94 hours for components.
-The timer boundaries differ between suites; see docs/ENVIRONMENT.md.
-The full saved-result statistics check took 2.62 seconds on the local CPU.
+Four historical models were also evaluated on their full test splits:
+synthetic PointNet, synthetic MDGCN1, real MDGCN2 and the real component model
+with soft aggregation and add fusion at batch size 25. All 176 predicted
+categories matched the retained predictions. Environment details, probability
+differences and measured times are in verification/inference_summary.json.
 
-Environment
------------
-Two current server snapshots were received. Their hardware and software fields
-are identical, with different collection times. The kernel is 5.15.0-198-generic;
-training records show 5.15.0-187-generic. The current snapshots are retained in
-environment/ and summarized in docs/ENVIRONMENT.md.
+Recorded training intervals total 49.57 hours for complete, 6.55 hours for
+uniform and 21.94 hours for components. The timer boundaries are described in
+docs/ENVIRONMENT.md. The local saved-result statistics check took 2.62 seconds.
 
-Before publication
-------------------
-- Test the published download links and complete a fresh-environment smoke test.
-  Local ZIP extraction and saved-result verification have passed.
-- Confirm the authors' code license and third-party source notices.
-- Complete the uploads and add versioned input/checkpoint links.
-- Add the published links to the reproducibility report.
-
-The manuscript, private correspondence, full scan and account credentials
-are not part of this code/data release.
+The dated environment snapshots and original verification records are retained
+unchanged. Availability notes in staging_manifest.json refer to the original
+local preparation on 23 October 2026; this file describes the public release.
