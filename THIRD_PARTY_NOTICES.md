@@ -98,10 +98,10 @@ SOFTWARE.
 
 The original synthetic and real data remain attributed to the MVGCN authors. Their original download folders and the definitions of the derived inputs are listed in [docs/DATA.md](docs/DATA.md). Permission to share this study's additional preprocessing outputs and fixed splits has been provided by the data provider. The software notices above are not used as evidence of a blanket data-redistribution license. Private permission correspondence is retained outside the release.
 
-## Items to complete before public release
+## License scope
 
-- Complete the per-component provenance review using the identified sources above and the assembly manifests. These records identify incorporated portions and local edits; they do not establish a complete historical transfer chain for every baseline component.
-- Select and add the license for the authors' new implementation and release tools.
-- Preserve the applicable upstream notices when the code is packaged or redistributed.
+The source comparisons above and the assembly manifests record the identified upstream implementations and local adaptations. They do not establish a complete historical transfer chain for every baseline component. The applicable upstream copyright and permission notices are retained in this release.
 
-Installed dependencies, including NumPy, PyTorch, SciPy, scikit-learn and Matplotlib, retain their respective licenses. Dependency binaries are not bundled in this candidate.
+The authors have not assigned a separate license to their new implementation and release tools. The MIT notices above apply to the corresponding third-party portions, not to the datasets or the entire repository.
+
+Installed dependencies, including NumPy, PyTorch, SciPy, scikit-learn and Matplotlib, retain their respective licenses. Dependency binaries are not bundled in this release.
